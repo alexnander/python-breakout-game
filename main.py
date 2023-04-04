@@ -1,17 +1,21 @@
+import turtle
 from turtle import Screen
 from ball import Ball
 from paddle import Paddle
+from bricks import Bricks
 import time
 
 screen = Screen()
 screen.setup(600, 600)
 screen.bgcolor("black")
 screen.title("Breakout Game")
+turtle.tracer(0, 0)
 
 paddle = Paddle()
+bricks = Bricks()
 ball = Ball(paddle)
 
-# follow mouse location
+# follow mouse x location
 ws = screen.getcanvas()
 ws.bind('<Motion>', paddle.update_pos)
 

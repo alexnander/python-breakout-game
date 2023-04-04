@@ -48,3 +48,15 @@ class Ball(Turtle):
         # detect paddle hit
         if self.f_ypos == -280 + 10 and (self.paddle.xpos - 50 <= self.f_xpos <= self.paddle.xpos + 50):
             self.ycomp_v *= -1
+
+        # -- collision with brick --
+        # check when ball crosses grid line (vertical or horizontal) into new grid cell
+        # check if grid cell has visible turtle
+        # if turtle is visible, make invisible and set ball position to edge and reverse velocity
+        # otherwise ball continues moving in same direction
+
+        next_x = self.xcomp_v * self.velocity + self.f_xpos
+        next_y = self.ycomp_v * self.velocity + self.f_ypos
+
+        # direction oriented based check
+
