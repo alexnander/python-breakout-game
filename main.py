@@ -13,7 +13,7 @@ turtle.tracer(0, 0)
 
 paddle = Paddle()
 bricks = Bricks()
-ball = Ball(paddle)
+ball = Ball(paddle, bricks)
 
 # follow mouse x location
 ws = screen.getcanvas()

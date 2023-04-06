@@ -15,7 +15,7 @@ class Paddle(Turtle):
         self.xpos = 0
 
     def update_pos(self, event):
-        print(f"{event.x - 300}, {event.y - 300}")
+        # print(f"{event.x - 300}, {event.y - 300}")
         self.xpos = event.x - 300
 
     def update(self):
